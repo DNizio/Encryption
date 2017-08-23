@@ -1,0 +1,39 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Main
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner scanner = new Scanner(System.in);
+		
+		String word = scanner.nextLine();
+		int wordL = word.length();
+		System.out.println(wordL);
+		for (int i = 0; i < wordL; i++)
+			{
+			int ascii = (int) word.charAt(i);	
+			System.out.print(word.charAt(i) + "-" + ascii + "  ");
+			}
+			System.out.println("\n");
+	
+		ArrayList<Integer> code = new ArrayList<Integer>();
+		
+		for (int i = 0; i < wordL; i++){
+			code.add(myRandom());
+		}
+		
+		for (int k:code){
+		System.out.print(k + " ");
+		}
+		
+	}
+	
+	 public static int myRandom()
+	{
+		Random random = new Random();
+		int a = random.nextInt(50);
+		return a;
+	}
+}
